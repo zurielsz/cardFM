@@ -1,0 +1,141 @@
+:root 
+{
+/* Colores */
+--Dark-cyan: hsl(158, 36%, 37%);
+--Cream:        hsl(30, 38%, 92%);
+--VeryDarkBlue: hsl(212, 21%, 14%);
+--Dark-Grayish-Blue: hsl(228, 12%, 48%);
+--White: hsl(0, 0%, 100%);
+}
+* 
+{
+  margin:  0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html
+{
+  font-size:62.5%;
+  /* font-family: 'Fraunces', serif; */
+font-family: 'Montserrat', sans-serif;
+}
+body 
+{
+  font-size: 1.4rem;
+  width: 100vw;
+  height: 100vh;
+}
+main 
+{
+  width: 100%;
+  height: 100%;
+  background-color: var(--Cream);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.mainContainer 
+{
+  width: 500px;
+  height: 400px;
+  background-color: var(--White);
+  border-radius: 5px;
+  display: flex;
+  overflow: hidden;
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, .1);
+}
+.mainContainer .mainContainer--Image
+{
+  width: 49%;
+  height: 100%;
+  background-color: black;
+}
+.mainContainer .mainContainer--Description
+{
+  width: 51%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem 0;
+  padding: 3rem;
+}
+.mainContainer .mainContainer--Image img
+{
+  width: 100%;
+  height: 100%;
+  opacity: 0.9;
+}
+.mainContainer .mainContainer--Description .title,
+.mainContainer .mainContainer--Description .slogan,
+.mainContainer .mainContainer--Description .description,
+.mainContainer .mainContainer--Description .price,
+.mainContainer .mainContainer--Description .button
+{
+  width: 100%;
+  color: var(--Dark-Grayish-Blue);
+}
+.mainContainer .mainContainer--Description .title p 
+{
+  text-transform: uppercase;
+  letter-spacing: .3rem;
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+.mainContainer .mainContainer--Description .slogan
+{
+  color: var(--VeryDarkBlu);
+  font-size: 3rem;
+  font-family: 'Fraunces', serif;
+  font-weight: 700;
+  line-height: 2.8rem;
+}
+.mainContainer .mainContainer--Description .description
+{
+  font-size: 1.2rem;
+  line-height: 1.8rem;
+  font-weight: 500;
+}
+.mainContainer .mainContainer--Description .price
+{
+  display: flex;
+  align-items: center;
+  gap: 0 2rem;
+  width: 100%;
+}
+.mainContainer .mainContainer--Description .price .offer{
+  font-size: 3rem;
+  font-family: 'Fraunces', serif;
+  color: var(--Dark-cyan);
+  font-weight: 700;
+}
+.mainContainer .mainContainer--Description .price .real 
+{
+  text-decoration: line-through;
+}
+.mainContainer .mainContainer--Description .button button
+{
+  font-weight: 600;
+  color: var(--White);
+  width: 90%;
+  background-color: var(--Dark-cyan);
+  border: none;
+  padding: 1rem;
+  border-radius: .5rem;
+  display: flex;
+  gap: 0 1rem;
+  justify-content: center;
+  align-items: center;
+  transition: background-color;
+  transition-duration: 0.5s;
+  transition-timing-function: ease-in-out;
+}
+.mainContainer .mainContainer--Description .button button:hover
+{
+  background-color: hsl(158, 37%, 19%);
+}
+
+.mainContainer .mainContainer--Description .button button span
+{
+  width: 1.8rem;
+  height: 1.8rem;
+}
