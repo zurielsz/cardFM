@@ -48,7 +48,6 @@ main
 {
   width: 49%;
   height: 100%;
-  background-color: black;
 }
 .mainContainer .mainContainer--Description
 {
@@ -59,11 +58,14 @@ main
   gap: 2rem 0;
   padding: 3rem;
 }
-.mainContainer .mainContainer--Image img
+.mainContainer .mainContainer--Image .imgfull
 {
   width: 100%;
   height: 100%;
   opacity: 0.9;
+}
+.mainContainer .mainContainer--Image .imgMobile {
+  display: none;
 }
 .mainContainer .mainContainer--Description .title,
 .mainContainer .mainContainer--Description .slogan,
@@ -138,4 +140,49 @@ main
 {
   width: 1.8rem;
   height: 1.8rem;
+}
+
+@media (max-width: 500px) {
+  .mainContainer {
+    width: 340px;
+    height: 95%;
+    
+    flex-direction: column;
+  }
+  .mainContainer .mainContainer--Image,
+  .mainContainer .mainContainer--Description
+  {
+    width: 340px;
+  }
+  .mainContainer .mainContainer--Image {
+    height: 40%;
+  }
+  .mainContainer .mainContainer--Description
+  {
+    height: 60%;
+  }
+  .mainContainer .mainContainer--Image .imgfull {
+    display: none;
+  }
+  .mainContainer .mainContainer--Image .imgMobile
+  {
+    display: block;
+    width: 340px;
+    height: 100%;
+    object-fit: fill;
+  }
+  .mainContainer .mainContainer--Description
+  {
+    gap: 1.5rem;
+  }
+  .mainContainer .mainContainer--Description .slogan
+  {
+    letter-spacing: .1rem;
+  }
+  .mainContainer .mainContainer--Description .description
+  {
+    line-height: 2rem;
+    font-weight: 500;
+    font-size: 1.4rem;
+  }
 }
